@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.route.islamic41.R
 import com.route.islamic41.databinding.ActivityMainBinding
-import com.route.islamic41.home.tabs.HadethFragment
+import com.route.islamic41.home.tabs.hadeth.HadethFragment
 import com.route.islamic41.home.tabs.RadioFragment
 import com.route.islamic41.home.tabs.TasbehFragment
 import com.route.islamic41.home.tabs.quran.QuranFragment

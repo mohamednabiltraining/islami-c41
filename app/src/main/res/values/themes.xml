@@ -4,6 +4,8 @@
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorSecondary">@color/primary</item>
+        <item name="colorPrimaryContainer">@color/primary</item>
+        <item name="colorSecondaryContainer">@color/primary</item>
     </style>
 
     <style name="Theme.IslamiC41" parent="Base.Theme.IslamiC41" />
