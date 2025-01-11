@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGray"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_chapter_details"
+    tools:context=".home.tabs.chapterDetails.ChapterDetailsActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/chapter_details_background"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/chapter_title_ar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textSize="24sp"
+        android:textColor="@color/primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Sura name in arabic"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/verses_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintHeight_percent=".75"
+        app:layout_constraintTop_toBottomOf="@id/chapter_title_ar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_verse"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
