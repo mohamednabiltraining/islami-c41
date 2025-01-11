@@ -7,4 +7,9 @@
     </style>
 
     <style name="Theme.IslamiC41" parent="Base.Theme.IslamiC41" />
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@color/primary</item>
+    </style>
 </resources>
