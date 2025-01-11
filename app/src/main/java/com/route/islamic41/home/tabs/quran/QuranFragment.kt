@@ -1,10 +1,12 @@
 package com.route.islamic41.home.tabs.quran
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.route.islamic41.home.tabs.chapterDetails.ChapterDetailsActivity
 import com.route.islamic41.databinding.FragmentQuranBinding
 import com.route.islamic41.home.AppConstants
 
@@ -33,6 +35,11 @@ class QuranFragment : Fragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
         adapter = ChaptersAdapter(chapters)
+        adapter.onItemClick = ChaptersAdapter.OnItemClick { position, chapter ->
+            val intent = Intent(activity, ChapterDetailsActivity::class.java)
+            intent.putExtra(AppConstants.EXTRA.EXTRA_CHAPTER,chapter)
+            startActivity(intent)
+        }
         viewBinding.chapterRecycler.adapter = adapter
     }
 

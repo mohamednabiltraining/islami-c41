@@ -39,5 +39,14 @@ class ChaptersAdapter(
         holder.itemBinding.versesNumberTv.text = chapter.versesNumber
         // holder.itemBinding.chapterIndexTv.setText(chapter.index+1)
         holder.itemBinding.chapterIndexTv.text = "${chapter.index + 1}"
+        onItemClick?.let { onClick->
+            holder.itemView.setOnClickListener {
+                onClick.onItemClick(position,chapter)
+            }
+        }
+    }
+    var onItemClick : OnItemClick? = null
+    fun interface OnItemClick{
+        fun onItemClick(position: Int,chapter: Chapter)
     }
 }
