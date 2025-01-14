@@ -3,6 +3,8 @@ package com.route.islamic41.home
 import com.route.islamic41.model.Chapter
 
 object AppConstants {
+    var counter = 0
+
     val arabicAuranSuras =
         listOf(
             "الفاتحه",
