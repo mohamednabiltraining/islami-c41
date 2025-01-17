@@ -10,6 +10,8 @@ import com.route.islamic41.home.AppConstants
 
 class TasbehFragment : Fragment() {
     lateinit var viewBinding: FragmentSebhaBinding
+    var rotationScale = 0.0f
+    var zekrTurn = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,12 +25,22 @@ class TasbehFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewBinding.tvSebhaNum.text = "${AppConstants.counter}"
         viewBinding.imgSebha.setOnClickListener { sebhaClick() }
     }
 
     private fun sebhaClick() {
         AppConstants.counter++
+        rotationScale += 3.6f
+        viewBinding.tvSebhaText.text = AppConstants.zekr[zekrTurn]
         viewBinding.tvSebhaNum.text = "${AppConstants.counter}"
+        viewBinding.imgSebha.rotation = rotationScale
+        if (AppConstants.counter % 33 == 0) zekrTurn++
+        if (AppConstants.counter == 100) resetSebha()
+    }
+
+    private fun resetSebha() {
+        AppConstants.counter = 0
+        rotationScale = 0.0f
+        zekrTurn = 0
     }
 }
