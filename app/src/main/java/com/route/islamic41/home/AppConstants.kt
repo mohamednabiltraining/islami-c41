@@ -3,6 +3,13 @@ package com.route.islamic41.home
 import com.route.islamic41.model.Chapter
 
 object AppConstants {
+    var counter = 1
+    val zekr = listOf(
+        "سبحان الله",
+        "الحمدلله",
+        "الله اكبر",
+        "\n\nلا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير",
+    )
     val arabicAuranSuras =
         listOf(
             "الفاتحه",

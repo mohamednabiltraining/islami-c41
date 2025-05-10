@@ -7,7 +7,7 @@ import com.route.islamic41.R
 import com.route.islamic41.databinding.ActivityMainBinding
 import com.route.islamic41.home.tabs.hadeth.HadethFragment
 import com.route.islamic41.home.tabs.RadioFragment
-import com.route.islamic41.home.tabs.TasbehFragment
+import com.route.islamic41.home.tabs.sebha.TasbehFragment
 import com.route.islamic41.home.tabs.quran.QuranFragment
 
 class MainActivity : AppCompatActivity() {
